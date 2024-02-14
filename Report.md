@@ -1,6 +1,7 @@
 # Bài tập Tết học phần Kiến trúc phần mềm INT3105 1
 ## 1. Docker và Docker-compose
 ### 1.1. Công nghệ ảo hóa (virtualization) và container hóa (containerization)
+
 ### 1.2. Giới thiệu về Docker
 ## 2. Linux, Unix, BSD, *nix
 **Unix** là một tập hợp gồm nhiều hệ điều hành máy tính **đa nhiệm**, **nhiều người dùng** bắt nguồn từ hệ điều hành Unix gốc của tập đoàn AT&T. Việc phát triển Unix được bắt đầu từ 1969 tại phòng thí nghiệm Bell bởi các tác giả Ken Thompson, Dennis Ritchie,... (cũng là các tác giả tạo ra ngôn ngữ lập trình C).
@@ -16,7 +17,12 @@ Các hệ điều hành Unix được thiết kế dựa trên **"triết lý Un
 
 **Linux** là một hệ điều hành mã nguồn mở do Linus Torvald phát triển dựa trên bộ công cụ mã nguồn mở GNU (nên đôi khi hệ điều hành này được gọi là GNU/Linux). Điểm đặc biệt của Linux là hoàn toàn không dựa trên mã nguồn của các phần mềm thương mại, kể cả Unix, mà chỉ dựa vào các công cụ mã nguồn mở (tiêu biểu là GNU). Ngoài ra, dù được tạo điều kiện, nhưng Linux không hề tham gia vào tiêu chuẩn POSIX hay tiêu chuẩn SUS. Chính vì vậy, Linux được xếp loại vào hệ điều hành Unix-like. Ngày nay, Linux được phát hành thông qua các **bản phân phối (distro)** khác nhau do các bên thứ ba phát triển. Một điểm đặc biệt của Linux đó chính là tính mã nguồn mở của nó, giúp cho lập trình viên trên khắp thế giới có thể tự do đề xuất sửa đổi, sao chép, tham khảo tự do.
 
-## 3. Alphine và Ubuntu
-Alphine và Ubuntu là hai distro khác nhau của Linux.
+## 3. Alpine và Ubuntu
+Alpine và Ubuntu là hai distro khác nhau của Linux. Ubuntu Linux là distro mã nguồn mở do Canonical phát triển, dựa trên một distro khác là Debian Linux. Alpine Linux là một distro mã nguồn mở khác, có đặc tính là nhỏ gọn, an toàn, thời gian khởi động nhanh, không dùng bộ công cụ phổ biến hơn của GNU (Nó dùng musl, BusyBox, và OpenRC thay vì glibc, GNU Core Utilities, và systemd). Chính nhờ những đặc điểm này nên Alpine hay được sử dụng cho các container hay hệ điều hành nhúng.
+
 ## 4. VNC
+VNC - hay Virtual Network Computing (Hệ thống điện toán ảo qua mạng) là một hệ thống chia sẻ màn hình đồ họa sử dụng giao thức RFB (Remote Frame Buffer - Bộ đệm khung từ xa) để điều khiển từ xa một máy tính khác. Nó truyền đầu vào bàn phím và chuột từ máy tính này sang máy tính khác, chuyển tiếp những thay đổi đồ họa qua mạng.
+
+VNC không phụ thuộc vào các nền tảng – ​​có máy khách và máy chủ cho nhiều hệ điều hành dựa trên GUI và cho Java. Nhiều máy khách có thể kết nối với máy chủ VNC cùng một lúc.
+
   
