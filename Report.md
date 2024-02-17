@@ -1,8 +1,24 @@
 # Bài tập Tết học phần Kiến trúc phần mềm INT3105 1
 ## 1. Docker và Docker-compose
 ### 1.1. Công nghệ ảo hóa (virtualization) và container hóa (containerization)
+**Virtualization** là công nghệ ảo hóa, cho phép chúng ta có thể cài nhiều môi trường ảo với các hệ điều hành khác nhau trên cùng một máy vật lý. Công nghệ ảo hóa dựa vào một **hypervisor**, một lớp phần mềm giúp các hệ điều hành có thể song song tồn tại và chia sẻ cùng một nguồn tài nguyên.
+Tuy công nghệ ảo hóa có nhiều ưu điểm so với việc phải sử dụng máy chủ vật lý như giá thành thấp, độc lập với phần cứng, có thể chạy nhiều môi trường khác nhau cùng lúc. Tuy vậy, công nghệ ảo hóa truyền thống sẽ làm tăng chí phí vận hành phát sinh do phải có thêm một lớp nữa xen giữa tầng vật lý và tầng phần mềm.
+![So sánh giữa môi trường truyền thống và môi trường ảo hóa](https://github.com/revoluzionario/software-architecture-docker/assets/94961228/eb5d4b25-421a-4e11-ac11-19e09e4ca434)
+
+Để khắc phục tình trạng này, một công nghệ khác là **container hóa** hay **containerization** đã ra đời. Công nghệ này cho phép chúng ta có thể chạy nhiều instance, được cọi là container, trên cùng một máy chủ vật lý mà không cần hypervisor, mà thay vào đó, các container này sẽ cùng chia sẻ chung nhân hệ điều hành, và qua đó hiệu suất tốt hơn so với ảo hóa truyền thống. 
+![So sánh giữa Containerization và Virtualization](https://github.com/revoluzionario/software-architecture-docker/assets/94961228/f6c3520a-f758-45c9-b054-cf7934642b8d)
+
+Công nghệ ảo hóa và container hóa được sử dụng để tạo ra một môi trường biệt lập chuyên dùng cho phát triển phần mềm, giúp các dự án phát triển phần mềm có thể dễ dàng quản lý và kiểm soát về tài nguyên cũng như quy mô phần mềm.
 
 ### 1.2. Giới thiệu về Docker
+**Docker** là nền tảng phần mềm cho phép dựng, kiểm thử và triển khai ứng dụng một cách nhanh chóng. Docker đóng gói phần mềm vào các đơn vị tiêu chuẩn hóa được gọi là container có mọi thứ mà phần mềm cần để chạy, trong đó có thư viện, công cụ hệ thống, mã và thời gian chạy. Bằng cách sử dụng Docker, ta có thể nhanh chóng triển khai và thay đổi quy mô ứng dụng vào bất kỳ môi trường nào và biết chắc rằng code sẽ chạy được.
+
+**docker-compose** là công cụ dùng để định nghĩa và chạy các multi-container cho Docker application. Với compose chúng ta sử dụng file YAML để tùy chỉnh các services cho phần mềm, sau đó dùng command để tạo và khởi chạy từ những config đó, thông qua ba bước như sau:
+
+1. Khai báo môi trường trong Dockerfile.
+2. Khai báo các services cần thiết để chạy phần mềm trong file docker-compose.yml.
+3. Chạy docker-compose để khởi chạy.
+
 ## 2. Linux, Unix, BSD, *nix
 **Unix** là một tập hợp gồm nhiều hệ điều hành máy tính **đa nhiệm**, **nhiều người dùng** bắt nguồn từ hệ điều hành Unix gốc của tập đoàn AT&T. Việc phát triển Unix được bắt đầu từ 1969 tại phòng thí nghiệm Bell bởi các tác giả Ken Thompson, Dennis Ritchie,... (cũng là các tác giả tạo ra ngôn ngữ lập trình C).
 Sau khi AT&T cấp phép sử dụng công khai đối với hệ điều hành Unix, đã có rất nhiều hệ điều hành dựa trên Unix được phát triển, bao gồm BSD (Berkeley Software Distribution), Microsoft Xenix,... dẫn đến việc Tiêu chuẩn UNIX đơn nhất (Single UNIX Specification - SUS) và tiêu chuẩn POSIX ra đời để thống nhất quy chuẩn.
