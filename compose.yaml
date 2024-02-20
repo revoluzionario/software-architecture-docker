@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  tutorial:
+    image: ubuntu:latest
+    ports:
+      - "5903:5903"
+    tty: true
