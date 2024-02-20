@@ -7,8 +7,9 @@
 5. Sau đó, ta sẽ truy cập vào bash shell của container này thông qua câu lệnh `docker exec -it <container_name> bash`
 6. Ta tiến hành cài VNC Server vào container thông qua các bước:
   6.1. `apt update`: cập nhật danh sách package
-  6.2. Dùng câu lệnh wget để tải VNC Server phù hợp với container
-  6.3. Khởi chạy service VNC Server bằng câu lệnh: `systemctl start vncserver-x11-serviced.service`
+  6.2. Dùng câu lệnh wget để tải VNC Server phù hợp với container, ở đây ta dùng TigerVNC
+  6.3. Khởi chạy service TigerVNC Server bằng câu lệnh: ``
 7. Ta cài Xfce bằng câu lệnh sau: `apt-get install xfce4-session xfce4-goodies`
-8. Ta cài thêm Xinit: `apt-get install xinit`
+8. Ta cài thêm Xinit: `apt-get install xinit
+9. Thông qua VNC Client (ở đây ta dùng NoVNC), kết nối với VNC Server thông qua cổng đã tùy chỉnh trong `compose.yaml`.
 ## Minh chứng kết quả thực hành
